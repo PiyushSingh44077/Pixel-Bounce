@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Bounce</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('font.ttf') format('truetype');
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+            color: #fff;
+            font-family: 'CustomFont', Arial, sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        canvas {
+            background-color: #444;
+            border: 1px solid #000;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff00a5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-family: 'CustomFont', Arial, sans-serif;
+        }
+        input[type="text"] {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #ff00a5;
+            font-family: 'CustomFont', Arial, sans-serif;
+        }
+        #playerName, #startButton {
+            display: block;
+        }
+        #replayButton {
+            display: none;
+        }
+        #highScores {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pixel Bounce</h1>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <input type="text" id="playerName" placeholder="Enter your name">
+    <button id="startButton" onclick="startGame()">Start Game</button>
+    <button id="replayButton" onclick="resetGame()">Replay</button>
+    <div id="highScores"></div>
+    <script src="game.js"></script>
+</body>
+</html>
